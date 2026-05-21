@@ -1,0 +1,150 @@
+body{
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.ceu{
+  position:relative;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(#87CEEB 60%, #3cb043 60%);
+}
+
+h1{
+  position:absolute;
+  top:20px;
+  width:100%;
+  text-align:center;
+  color:white;
+  font-size:40px;
+}
+
+.sol{
+  position:absolute;
+  top:40px;
+  right:50px;
+  width:100px;
+  height:100px;
+  background:yellow;
+  border-radius:50%;
+  box-shadow:0 0 30px yellow;
+}
+
+.campo{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:40%;
+}
+
+.lixo{
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#333;
+  border-radius:4px;
+}
+
+.lixo1{ left:20%; bottom:40px; }
+.lixo2{ left:40%; bottom:80px; }
+.lixo3{ left:60%; bottom:50px; }
+.lixo4{ left:80%; bottom:90px; }
+
+.homem{
+  position:absolute;
+  bottom:120px;
+  left:-100px;
+  width:100px;
+  height:220px;
+  animation:andar 12s linear infinite;
+}
+
+.cabeca{
+  position:absolute;
+  top:0;
+  left:30px;
+  width:40px;
+  height:40px;
+  background:#f5c28b;
+  border-radius:50%;
+}
+
+.corpo{
+  position:absolute;
+  top:40px;
+  left:25px;
+  width:50px;
+  height:80px;
+  background:#1565c0;
+  border-radius:10px;
+}
+
+.braco{
+  position:absolute;
+  top:50px;
+  width:15px;
+  height:70px;
+  background:#f5c28b;
+  border-radius:10px;
+  transform-origin:top;
+}
+
+.esquerdo{
+  left:10px;
+  animation:mover 1s infinite alternate;
+}
+
+.direito{
+  right:10px;
+  animation:mover 1s infinite alternate-reverse;
+}
+
+.perna{
+  position:absolute;
+  top:115px;
+  width:18px;
+  height:80px;
+  background:#222;
+  border-radius:10px;
+  transform-origin:top;
+}
+
+.esquerda{
+  left:28px;
+  animation:mover 1s infinite alternate;
+}
+
+.direita{
+  right:28px;
+  animation:mover 1s infinite alternate-reverse;
+}
+
+.vassoura{
+  position:absolute;
+  top:70px;
+  right:-5px;
+  width:8px;
+  height:100px;
+  background:#8b5a2b;
+  transform:rotate(20deg);
+}
+
+@keyframes mover{
+  from{
+    transform:rotate(-20deg);
+  }
+  to{
+    transform:rotate(20deg);
+  }
+}
+
+@keyframes andar{
+  from{
+    left:-120px;
+  }
+  to{
+    left:110%;
+  }
+}
