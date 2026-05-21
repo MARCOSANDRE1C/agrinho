@@ -1,34 +1,38 @@
-const man = document.getElementById("man");
-const trashItems = document.querySelectorAll(".trash");
+const worker =
+document.getElementById("worker");
 
-function cleanField(){
+const trash =
+document.querySelectorAll(".trash");
 
-  const manPosition =
-    man.getBoundingClientRect();
+function cleanTrash(){
 
-  trashItems.forEach((trash)=>{
+  const workerPos =
+  worker.getBoundingClientRect();
 
-    const trashPosition =
-      trash.getBoundingClientRect();
+  trash.forEach(item => {
+
+    const trashPos =
+    item.getBoundingClientRect();
 
     const distance =
-      Math.abs(
-        manPosition.left -
-        trashPosition.left
-      );
+    Math.abs(
+      workerPos.left -
+      trashPos.left
+    );
 
-    if(distance < 60){
+    if(distance < 70){
 
-      trash.style.opacity = "0";
-      trash.style.transform =
+      item.style.transform =
       "scale(0) rotate(180deg)";
 
-      trash.style.transition =
-      "all 0.5s ease";
+      item.style.opacity = "0";
+
+      item.style.transition =
+      "all 0.6s ease";
     }
 
   });
 
 }
 
-setInterval(cleanField, 100);
+setInterval(cleanTrash, 100);
