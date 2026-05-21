@@ -3,148 +3,368 @@ body{
   height:100vh;
   overflow:hidden;
   font-family:Arial, Helvetica, sans-serif;
+  background:#87ceeb;
 }
 
-.ceu{
+.scene{
   position:relative;
   width:100%;
   height:100vh;
-  background:linear-gradient(#87CEEB 60%, #3cb043 60%);
 }
 
-h1{
+/* CÉU */
+
+.sky{
+  position:absolute;
+  width:100%;
+  height:65%;
+  background:
+  linear-gradient(
+    to bottom,
+    #6ec6ff,
+    #bfe9ff
+  );
+}
+
+/* SOL */
+
+.sun{
+  position:absolute;
+  top:50px;
+  right:90px;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:#ffd54f;
+  box-shadow:
+  0 0 30px #ffd54f,
+  0 0 60px #ffd54f;
+}
+
+/* NUVENS */
+
+.cloud{
+  position:absolute;
+  background:white;
+  border-radius:50px;
+  opacity:0.9;
+}
+
+.cloud::before,
+.cloud::after{
+  content:"";
+  position:absolute;
+  background:white;
+  border-radius:50%;
+}
+
+.cloud1{
+  width:140px;
+  height:50px;
+  top:90px;
+  left:10%;
+  animation:cloudMove 40s linear infinite;
+}
+
+.cloud1::before{
+  width:60px;
+  height:60px;
+  top:-25px;
+  left:15px;
+}
+
+.cloud1::after{
+  width:80px;
+  height:80px;
+  top:-35px;
+  right:10px;
+}
+
+.cloud2{
+  width:180px;
+  height:60px;
+  top:170px;
+  left:55%;
+  animation:cloudMove 55s linear infinite;
+}
+
+.cloud2::before{
+  width:70px;
+  height:70px;
+  top:-30px;
+  left:20px;
+}
+
+.cloud2::after{
+  width:90px;
+  height:90px;
+  top:-40px;
+  right:20px;
+}
+
+/* MONTANHAS */
+
+.mountains{
+  position:absolute;
+  bottom:30%;
+  width:100%;
+  height:250px;
+  background:
+  linear-gradient(
+    to top,
+    #3d5a40,
+    #4d774e
+  );
+
+  clip-path: polygon(
+    0% 100%,
+    15% 45%,
+    28% 100%,
+    45% 30%,
+    60% 100%,
+    75% 40%,
+    100% 100%
+  );
+}
+
+/* CAMPO */
+
+.field{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:35%;
+  background:
+  linear-gradient(
+    to top,
+    #2e7d32,
+    #43a047
+  );
+}
+
+/* GRAMA */
+
+.grass{
+  position:absolute;
+  top:-20px;
+  width:100%;
+  height:25px;
+  background:
+  repeating-linear-gradient(
+    -45deg,
+    #4caf50,
+    #4caf50 5px,
+    #43a047 5px,
+    #43a047 10px
+  );
+}
+
+/* LIXOS */
+
+.trash{
+  position:absolute;
+  width:26px;
+  height:20px;
+  border-radius:4px;
+  background:#555;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.trash::before{
+  content:"";
+  position:absolute;
+  top:-4px;
+  left:4px;
+  width:18px;
+  height:4px;
+  background:#777;
+  border-radius:2px;
+}
+
+.trash1{
+  left:15%;
+  bottom:60px;
+}
+
+.trash2{
+  left:35%;
+  bottom:120px;
+}
+
+.trash3{
+  left:55%;
+  bottom:70px;
+}
+
+.trash4{
+  left:70%;
+  bottom:110px;
+}
+
+.trash5{
+  left:88%;
+  bottom:85px;
+}
+
+/* PERSONAGEM */
+
+.man{
+  position:absolute;
+  bottom:90px;
+  left:-150px;
+  width:120px;
+  height:260px;
+  animation:walk 18s linear infinite;
+}
+
+/* CABEÇA */
+
+.head{
+  position:absolute;
+  top:0;
+  left:40px;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#f1c27d;
+  z-index:2;
+}
+
+/* CORPO */
+
+.body{
+  position:absolute;
+  top:45px;
+  left:30px;
+  width:60px;
+  height:95px;
+  border-radius:12px;
+  background:
+  linear-gradient(
+    to bottom,
+    #1565c0,
+    #0d47a1
+  );
+}
+
+/* BRAÇOS */
+
+.arm{
+  position:absolute;
+  width:16px;
+  height:80px;
+  top:55px;
+  background:#f1c27d;
+  border-radius:10px;
+  transform-origin:top;
+}
+
+.left-arm{
+  left:18px;
+  animation:armMove 0.8s infinite alternate;
+}
+
+.right-arm{
+  right:18px;
+  animation:armMove 0.8s infinite alternate-reverse;
+}
+
+/* PERNAS */
+
+.leg{
+  position:absolute;
+  width:18px;
+  height:95px;
+  top:130px;
+  background:#1f1f1f;
+  border-radius:10px;
+  transform-origin:top;
+}
+
+.left-leg{
+  left:38px;
+  animation:legMove 0.8s infinite alternate;
+}
+
+.right-leg{
+  right:38px;
+  animation:legMove 0.8s infinite alternate-reverse;
+}
+
+/* VASSOURA */
+
+.broom-stick{
+  position:absolute;
+  width:8px;
+  height:120px;
+  background:#8d6e63;
+  top:60px;
+  right:8px;
+  transform:rotate(20deg);
+}
+
+.broom-brush{
+  position:absolute;
+  width:35px;
+  height:20px;
+  background:#d7a86e;
+  top:160px;
+  right:-8px;
+  border-radius:0 0 8px 8px;
+  transform:rotate(20deg);
+}
+
+/* TÍTULO */
+
+.title{
   position:absolute;
   top:20px;
   width:100%;
   text-align:center;
+  font-size:38px;
   color:white;
-  font-size:40px;
+  font-weight:bold;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
 
-.sol{
-  position:absolute;
-  top:40px;
-  right:50px;
-  width:100px;
-  height:100px;
-  background:yellow;
-  border-radius:50%;
-  box-shadow:0 0 30px yellow;
-}
+/* ANIMAÇÕES */
 
-.campo{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:40%;
-}
-
-.lixo{
-  position:absolute;
-  width:20px;
-  height:20px;
-  background:#333;
-  border-radius:4px;
-}
-
-.lixo1{ left:20%; bottom:40px; }
-.lixo2{ left:40%; bottom:80px; }
-.lixo3{ left:60%; bottom:50px; }
-.lixo4{ left:80%; bottom:90px; }
-
-.homem{
-  position:absolute;
-  bottom:120px;
-  left:-100px;
-  width:100px;
-  height:220px;
-  animation:andar 12s linear infinite;
-}
-
-.cabeca{
-  position:absolute;
-  top:0;
-  left:30px;
-  width:40px;
-  height:40px;
-  background:#f5c28b;
-  border-radius:50%;
-}
-
-.corpo{
-  position:absolute;
-  top:40px;
-  left:25px;
-  width:50px;
-  height:80px;
-  background:#1565c0;
-  border-radius:10px;
-}
-
-.braco{
-  position:absolute;
-  top:50px;
-  width:15px;
-  height:70px;
-  background:#f5c28b;
-  border-radius:10px;
-  transform-origin:top;
-}
-
-.esquerdo{
-  left:10px;
-  animation:mover 1s infinite alternate;
-}
-
-.direito{
-  right:10px;
-  animation:mover 1s infinite alternate-reverse;
-}
-
-.perna{
-  position:absolute;
-  top:115px;
-  width:18px;
-  height:80px;
-  background:#222;
-  border-radius:10px;
-  transform-origin:top;
-}
-
-.esquerda{
-  left:28px;
-  animation:mover 1s infinite alternate;
-}
-
-.direita{
-  right:28px;
-  animation:mover 1s infinite alternate-reverse;
-}
-
-.vassoura{
-  position:absolute;
-  top:70px;
-  right:-5px;
-  width:8px;
-  height:100px;
-  background:#8b5a2b;
-  transform:rotate(20deg);
-}
-
-@keyframes mover{
+@keyframes walk{
   from{
-    transform:rotate(-20deg);
+    left:-150px;
   }
-  to{
-    transform:rotate(20deg);
-  }
-}
 
-@keyframes andar{
-  from{
-    left:-120px;
-  }
   to{
     left:110%;
+  }
+}
+
+@keyframes armMove{
+  from{
+    transform:rotate(-25deg);
+  }
+
+  to{
+    transform:rotate(25deg);
+  }
+}
+
+@keyframes legMove{
+  from{
+    transform:rotate(20deg);
+  }
+
+  to{
+    transform:rotate(-20deg);
+  }
+}
+
+@keyframes cloudMove{
+  from{
+    transform:translateX(-200px);
+  }
+
+  to{
+    transform:translateX(120vw);
   }
 }

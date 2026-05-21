@@ -1,25 +1,34 @@
-const homem = document.getElementById("homem");
-const lixos = document.querySelectorAll(".lixo");
+const man = document.getElementById("man");
+const trashItems = document.querySelectorAll(".trash");
 
-function limparCampo() {
+function cleanField(){
 
-  const posicaoHomem = homem.getBoundingClientRect();
+  const manPosition =
+    man.getBoundingClientRect();
 
-  lixos.forEach((lixo) => {
+  trashItems.forEach((trash)=>{
 
-    const posicaoLixo = lixo.getBoundingClientRect();
+    const trashPosition =
+      trash.getBoundingClientRect();
 
-    const distancia = Math.abs(
-      posicaoHomem.left - posicaoLixo.left
-    );
+    const distance =
+      Math.abs(
+        manPosition.left -
+        trashPosition.left
+      );
 
-    if(distancia < 50){
-      lixo.style.opacity = "0";
-      lixo.style.transition = "0.5s";
+    if(distance < 60){
+
+      trash.style.opacity = "0";
+      trash.style.transform =
+      "scale(0) rotate(180deg)";
+
+      trash.style.transition =
+      "all 0.5s ease";
     }
 
   });
 
 }
 
-setInterval(limparCampo, 100);
+setInterval(cleanField, 100);
