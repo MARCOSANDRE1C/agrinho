@@ -2,50 +2,52 @@ const homem = document.querySelector(".homem");
 const lixos = document.querySelectorAll(".lixo");
 
 let posicao = 0;
-let indo = true;
+let velocidade = 3;
+let voltando = false;
 
-function limparCampo() {
+function animar() {
 
-  if (indo) {
-    posicao += 4;
+  // Movimento
+  if (!voltando) {
+    posicao += velocidade;
   } else {
-    posicao -= 4;
+    posicao -= velocidade;
   }
 
   homem.style.left = posicao + "px";
 
-  // Homem limpa os lixos
+  // Limpa os lixos
   lixos.forEach((lixo) => {
 
     const lixoPos = lixo.offsetLeft;
 
     if (
-      posicao > lixoPos - 40 &&
-      posicao < lixoPos + 40
+      posicao + 60 > lixoPos &&
+      posicao < lixoPos + 50
     ) {
       lixo.style.opacity = "0";
     }
   });
 
-  // Quando chega no fim
-  if (posicao > window.innerWidth - 120) {
+  // Chegou no fim
+  if (posicao >= window.innerWidth - 120) {
 
-    indo = false;
+    voltando = true;
 
-    // Suja novamente depois de 2 segundos
+    // Faz os lixos aparecerem novamente
     setTimeout(() => {
       lixos.forEach((lixo) => {
         lixo.style.opacity = "1";
       });
-    }, 2000);
+    }, 1000);
   }
 
-  // Volta pro começo
+  // Voltou ao começo
   if (posicao <= 0) {
-    indo = true;
+    voltando = false;
   }
 
-  requestAnimationFrame(limparCampo);
+  requestAnimationFrame(animar);
 }
 
-limparCampo();
+animar();
