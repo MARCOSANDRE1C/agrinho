@@ -51,9 +51,24 @@ body {
   position: absolute;
   bottom: 60px;
   left: 0;
-  font-size: 70px;
+  font-size: 100px; /* maior */
   z-index: 2;
-  transition: left 0.1s linear;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Vassoura */
+.vassoura {
+  display: inline-block;
+  font-size: 80px;
+  margin-left: -20px;
+  animation: balanco 0.5s infinite alternate;
+}
+
+/* Animação da vassoura */
+@keyframes balanco {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(20deg); }
 }
 
 /* Lixos */
@@ -65,14 +80,6 @@ body {
   transition: opacity 0.3s;
 }
 
-.lixo1 {
-  left: 250px;
-}
-
-.lixo2 {
-  left: 600px;
-}
-
-.lixo3 {
-  left: 900px;
-}
+.lixo1 { left: 250px; }
+.lixo2 { left: 600px; }
+.lixo3 { left: 900px; }
