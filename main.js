@@ -1,14 +1,14 @@
 const homem = document.querySelector(".homem");
 const lixos = document.querySelectorAll(".lixo");
 
-let posicao = 0;
-let velocidade = 3;
-let voltando = false;
+let posicao = 0;      // posição horizontal do homem
+let indo = true;       // se o homem está indo para frente
+const velocidade = 4;  // pixels por frame
 
 function animar() {
-
+  
   // Movimento
-  if (!voltando) {
+  if (indo) {
     posicao += velocidade;
   } else {
     posicao -= velocidade;
@@ -16,38 +16,33 @@ function animar() {
 
   homem.style.left = posicao + "px";
 
-  // Limpa os lixos
-  lixos.forEach((lixo) => {
+  // Checar colisão com lixo
+  lixos.forEach(lixo => {
+    const lixoEsq = lixo.offsetLeft;
+    const lixoDir = lixo.offsetLeft + lixo.offsetWidth;
 
-    const lixoPos = lixo.offsetLeft;
-
-    if (
-      posicao + 60 > lixoPos &&
-      posicao < lixoPos + 50
-    ) {
-      lixo.style.opacity = "0";
+    if (posicao + homem.offsetWidth > lixoEsq &&
+        posicao < lixoDir &&
+        lixo.style.opacity !== "0") {
+      lixo.style.opacity = "0"; // Limpa o lixo
     }
   });
 
-  // Chegou no fim
-  if (posicao >= window.innerWidth - 120) {
-
-    voltando = true;
-
-    // Faz os lixos aparecerem novamente
+  // Verifica fim de tela
+  if (posicao >= window.innerWidth - homem.offsetWidth) {
+    indo = false;
+    // Aparece lixo novamente depois de 2 segundos
     setTimeout(() => {
-      lixos.forEach((lixo) => {
-        lixo.style.opacity = "1";
-      });
-    }, 1000);
+      lixos.forEach(lixo => lixo.style.opacity = "1");
+    }, 2000);
   }
 
-  // Voltou ao começo
   if (posicao <= 0) {
-    voltando = false;
+    indo = true;
   }
 
   requestAnimationFrame(animar);
 }
 
+// Começa animação
 animar();

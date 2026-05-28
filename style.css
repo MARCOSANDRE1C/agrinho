@@ -1,77 +1,78 @@
-body{
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  background:linear-gradient(#87CEEB 70%, #4CAF50 30%);
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#87CEEB 70%, #4CAF50 30%);
 }
 
-.cenario{
-  position:relative;
-  width:100%;
-  height:100vh;
+.cenario {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Sol */
-.sol{
-  position:absolute;
-  top:30px;
-  right:50px;
-  width:100px;
-  height:100px;
-  background:yellow;
-  border-radius:50%;
-  box-shadow:0 0 40px yellow;
+.sol {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 40px yellow;
+  z-index: 0;
 }
 
 /* Animais */
-.animal{
-  position:absolute;
-  font-size:70px;
-  z-index:2;
+.animal {
+  position: absolute;
+  font-size: 60px;
+  z-index: 1;
 }
 
-.vaca{
-  bottom:140px;
-  left:120px;
+.vaca {
+  bottom: 120px;
+  left: 150px;
 }
 
-.galinha{
-  bottom:110px;
-  left:450px;
+.galinha {
+  bottom: 90px;
+  left: 450px;
 }
 
-.ovelha{
-  bottom:150px;
-  right:200px;
+.ovelha {
+  bottom: 130px;
+  right: 200px;
 }
 
 /* Homem */
-.homem{
-  position:absolute;
-  bottom:50px;
-  left:0;
-  font-size:70px;
-  z-index:3;
+.homem {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  font-size: 70px;
+  z-index: 2;
+  transition: left 0.1s linear;
 }
 
 /* Lixos */
-.lixo{
-  position:absolute;
-  bottom:60px;
-  font-size:50px;
-  z-index:2;
-  transition:opacity 0.3s;
+.lixo {
+  position: absolute;
+  bottom: 70px;
+  font-size: 50px;
+  z-index: 1;
+  transition: opacity 0.3s;
 }
 
-.lixo1{
-  left:250px;
+.lixo1 {
+  left: 250px;
 }
 
-.lixo2{
-  left:600px;
+.lixo2 {
+  left: 600px;
 }
 
-.lixo3{
-  left:950px;
+.lixo3 {
+  left: 900px;
 }
