@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Limpando o Campo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpando o Campo</title>
 
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="hud">
-    <div>💰 <span id="money">0</span></div>
-    <div>⭐ <span id="level">1</span></div>
-    <div>XP <span id="xp">0</span>/100</div>
-</div>
+    <header>
+        <h1>🌱 Limpando o Campo</h1>
+        <p>Juntos por um ambiente mais limpo e sustentável.</p>
+    </header>
 
-<canvas id="game"></canvas>
+    <main>
+        <section class="hero">
+            <h2>Preserve a Natureza</h2>
+            <p>
+                A limpeza de áreas rurais ajuda a proteger o solo,
+                a água e os animais que vivem no campo.
+            </p>
 
-<div id="shop">
-<h2>LOJA</h2>
-<p>1 - Velocidade</p>
-<p>2 - Imã</p>
-<p>3 - Mochila</p>
-<p>4 - Aspirador</p>
-</div>
+            <button id="acaoBtn">Participar da Limpeza</button>
+        </section>
 
-<script src="main.js"></script>
+        <section class="info">
+            <div class="card">
+                <h3>♻️ Reciclagem</h3>
+                <p>Separe corretamente os resíduos para reciclagem.</p>
+            </div>
 
+            <div class="card">
+                <h3>🌳 Preservação</h3>
+                <p>Evite descartar lixo em áreas verdes.</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Água Limpa</h3>
+                <p>Mantenha rios e nascentes livres de poluição.</p>
+            </div>
+        </section>
+
+        <div id="mensagem"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Projeto Limpando o Campo</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
