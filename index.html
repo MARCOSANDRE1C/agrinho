@@ -3,23 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Limpando o Campo</title>
+
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🌱 Limpando o Campo</h1>
+<header>
+    <h1>🌱 Limpando o Campo</h1>
+    <p>Escolha uma opção para navegar</p>
+</header>
 
-<div class="menu">
-    <button onclick="irPagina('perguntas.html')">
-        Perguntas
-    </button>
+<section class="cards">
 
-    <button onclick="irPagina('locais.html')">
-        Locais
-    </button>
-</div>
+    <div class="card" onclick="irPagina('perguntas.html')">
+        <h2>❓ Perguntas</h2>
+        <p>Saiba mais sobre preservação ambiental.</p>
+        <div class="btn">Entrar</div>
+    </div>
 
-<p>Bem-vindo ao projeto de preservação ambiental.</p>
+    <div class="card" onclick="irPagina('locais.html')">
+        <h2>📍 Locais</h2>
+        <p>Veja onde encontrar informações.</p>
+        <div class="btn">Entrar</div>
+    </div>
+
+    <div class="card" onclick="irPagina('acoes.html')">
+        <h2>♻️ Ações</h2>
+        <p>Dicas para manter o campo limpo.</p>
+        <div class="btn">Entrar</div>
+    </div>
+
+</section>
 
 <script src="main.js"></script>
 </body>
@@ -29,23 +44,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Perguntas</title>
+
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Perguntas Frequentes</h1>
+<div class="conteudo">
+<h1>❓ Perguntas Frequentes</h1>
 
 <h3>Por que limpar o campo?</h3>
-<p>Para proteger a natureza.</p>
+<p>Para proteger rios, animais e plantações.</p>
+
+<br>
 
 <h3>Como ajudar?</h3>
-<p>Não jogando lixo e participando de mutirões.</p>
+<p>Separando resíduos e evitando jogar lixo na natureza.</p>
 
-<button onclick="irPagina('index.html')">
-Voltar
-</button>
+<a href="index.html" class="voltar">Voltar</a>
+</div>
 
-<script src="main.js"></script>
 </body>
 </html>
 <!DOCTYPE html>
@@ -53,28 +71,45 @@ Voltar
 <head>
 <meta charset="UTF-8">
 <title>Locais</title>
+
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Locais para Informações</h1>
+<div class="conteudo">
+<h1>📍 Locais para Informações</h1>
 
-<a href="https://www.gov.br/mma" target="_blank">
-Ministério do Meio Ambiente
-</a>
+<p>• Ministério do Meio Ambiente</p>
+<p>• Secretaria Municipal do Meio Ambiente</p>
+<p>• Escolas e projetos ambientais</p>
 
-<br><br>
+<a href="index.html" class="voltar">Voltar</a>
+</div>
 
-<a href="https://www.wwf.org.br" target="_blank">
-WWF Brasil
-</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Ações</title>
 
-<br><br>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<button onclick="irPagina('index.html')">
-Voltar
-</button>
+<div class="conteudo">
+<h1>♻️ Ações Sustentáveis</h1>
 
-<script src="main.js"></script>
+<p>✅ Não jogue lixo em rios.</p>
+<p>✅ Faça coleta seletiva.</p>
+<p>✅ Plante árvores.</p>
+<p>✅ Preserve áreas verdes.</p>
+
+<a href="index.html" class="voltar">Voltar</a>
+</div>
+
 </body>
 </html>

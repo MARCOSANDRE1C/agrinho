@@ -1,29 +1,75 @@
 body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    background:#e8f5e9;
-    padding:30px;
-}
-
-h1{
-    color:#2e7d32;
-}
-
-button{
-    background:#43a047;
+    background:linear-gradient(135deg,#4caf50,#81c784);
+    min-height:100vh;
     color:white;
-    border:none;
-    padding:12px 20px;
-    margin:10px;
-    border-radius:8px;
+}
+
+header{
+    text-align:center;
+    padding:40px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    color:#333;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
     cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
 
-button:hover{
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
     background:#2e7d32;
+    color:white;
+    padding:10px 20px;
+    border-radius:10px;
 }
 
-a{
-    color:#1565c0;
-    font-size:20px;
+.conteudo{
+    max-width:900px;
+    margin:50px auto;
+    background:white;
+    color:#333;
+    padding:30px;
+    border-radius:20px;
+}
+
+.voltar{
+    display:inline-block;
+    margin-top:20px;
+    background:#2e7d32;
+    color:white;
+    padding:10px 20px;
+    border-radius:10px;
 }
