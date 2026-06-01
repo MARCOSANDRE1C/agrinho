@@ -1,115 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Limpando o Campo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpando o Campo</title>
 
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>🌱 Limpando o Campo</h1>
-    <p>Escolha uma opção para navegar</p>
-</header>
+<nav>
+    <div class="logo">🌱 Limpando o Campo</div>
 
-<section class="cards">
+    <ul>
+        <li><button onclick="mostrar('inicio')">Início</button></li>
+        <li><button onclick="mostrar('sobre')">Sobre</button></li>
+        <li><button onclick="mostrar('acoes')">Ações</button></li>
+        <li><button onclick="mostrar('contato')">Contato</button></li>
+    </ul>
+</nav>
 
-    <div class="card" onclick="irPagina('perguntas.html')">
-        <h2>❓ Perguntas</h2>
-        <p>Saiba mais sobre preservação ambiental.</p>
-        <div class="btn">Entrar</div>
+<main>
+
+<section id="inicio" class="pagina ativa">
+    <div class="hero">
+        <h1>Preservando o Campo para o Futuro</h1>
+        <p>
+            Um projeto dedicado à limpeza e preservação
+            das áreas rurais e naturais.
+        </p>
+
+        <button onclick="mostrar('acoes')" class="cta">
+            Conhecer Ações
+        </button>
     </div>
-
-    <div class="card" onclick="irPagina('locais.html')">
-        <h2>📍 Locais</h2>
-        <p>Veja onde encontrar informações.</p>
-        <div class="btn">Entrar</div>
-    </div>
-
-    <div class="card" onclick="irPagina('acoes.html')">
-        <h2>♻️ Ações</h2>
-        <p>Dicas para manter o campo limpo.</p>
-        <div class="btn">Entrar</div>
-    </div>
-
 </section>
 
+<section id="sobre" class="pagina">
+    <h2>Sobre o Projeto</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🌳 Natureza</h3>
+            <p>Proteção de áreas verdes e recursos naturais.</p>
+        </div>
+
+        <div class="card">
+            <h3>♻️ Reciclagem</h3>
+            <p>Incentivo ao descarte correto dos resíduos.</p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Água</h3>
+            <p>Preservação de rios e nascentes.</p>
+        </div>
+    </div>
+</section>
+
+<section id="acoes" class="pagina">
+    <h2>Ações Sustentáveis</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Coleta Seletiva</h3>
+            <p>Separar resíduos para reciclagem.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mutirões</h3>
+            <p>Participação em limpezas comunitárias.</p>
+        </div>
+
+        <div class="card">
+            <h3>Educação Ambiental</h3>
+            <p>Conscientização da população.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato" class="pagina">
+    <h2>Entre em Contato</h2>
+
+    <form>
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu e-mail">
+        <textarea placeholder="Sua mensagem"></textarea>
+
+        <button type="button">Enviar</button>
+    </form>
+</section>
+
+</main>
+
 <script src="main.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Perguntas</title>
-
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="conteudo">
-<h1>❓ Perguntas Frequentes</h1>
-
-<h3>Por que limpar o campo?</h3>
-<p>Para proteger rios, animais e plantações.</p>
-
-<br>
-
-<h3>Como ajudar?</h3>
-<p>Separando resíduos e evitando jogar lixo na natureza.</p>
-
-<a href="index.html" class="voltar">Voltar</a>
-</div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Locais</title>
-
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="conteudo">
-<h1>📍 Locais para Informações</h1>
-
-<p>• Ministério do Meio Ambiente</p>
-<p>• Secretaria Municipal do Meio Ambiente</p>
-<p>• Escolas e projetos ambientais</p>
-
-<a href="index.html" class="voltar">Voltar</a>
-</div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Ações</title>
-
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="conteudo">
-<h1>♻️ Ações Sustentáveis</h1>
-
-<p>✅ Não jogue lixo em rios.</p>
-<p>✅ Faça coleta seletiva.</p>
-<p>✅ Plante árvores.</p>
-<p>✅ Preserve áreas verdes.</p>
-
-<a href="index.html" class="voltar">Voltar</a>
-</div>
 
 </body>
 </html>
