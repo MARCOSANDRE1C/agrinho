@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limpando o Campo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limpando o Campo</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
@@ -17,38 +18,37 @@
         <li><button onclick="mostrar('inicio')">Início</button></li>
         <li><button onclick="mostrar('sobre')">Sobre</button></li>
         <li><button onclick="mostrar('acoes')">Ações</button></li>
-        <li><button onclick="mostrar('contato')">Contato</button></li>
+        <li><button onclick="mostrar('perguntas')">Perguntas</button></li>
     </ul>
 </nav>
 
 <main>
 
+<!-- INÍCIO -->
 <section id="inicio" class="pagina ativa">
     <div class="hero">
-        <h1>Preservando o Campo para o Futuro</h1>
-        <p>
-            Um projeto dedicado à limpeza e preservação
-            das áreas rurais e naturais.
-        </p>
+        <h1>Preservando o Campo</h1>
+        <p>Um projeto para limpeza e proteção da natureza.</p>
 
-        <button onclick="mostrar('acoes')" class="cta">
-            Conhecer Ações
+        <button class="cta" onclick="mostrar('acoes')">
+            Ver Ações
         </button>
     </div>
 </section>
 
+<!-- SOBRE -->
 <section id="sobre" class="pagina">
-    <h2>Sobre o Projeto</h2>
+    <h2>Sobre</h2>
 
     <div class="cards">
         <div class="card">
             <h3>🌳 Natureza</h3>
-            <p>Proteção de áreas verdes e recursos naturais.</p>
+            <p>Proteção ambiental do campo.</p>
         </div>
 
         <div class="card">
             <h3>♻️ Reciclagem</h3>
-            <p>Incentivo ao descarte correto dos resíduos.</p>
+            <p>Redução de lixo no ambiente.</p>
         </div>
 
         <div class="card">
@@ -58,44 +58,60 @@
     </div>
 </section>
 
+<!-- AÇÕES -->
 <section id="acoes" class="pagina">
-    <h2>Ações Sustentáveis</h2>
+    <h2>Ações</h2>
 
     <div class="cards">
-
         <div class="card">
             <h3>Coleta Seletiva</h3>
-            <p>Separar resíduos para reciclagem.</p>
+            <p>Separar lixo corretamente.</p>
         </div>
 
         <div class="card">
             <h3>Mutirões</h3>
-            <p>Participação em limpezas comunitárias.</p>
+            <p>Limpeza comunitária.</p>
         </div>
 
         <div class="card">
-            <h3>Educação Ambiental</h3>
-            <p>Conscientização da população.</p>
+            <h3>Educação</h3>
+            <p>Conscientização ambiental.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PERGUNTAS -->
+<section id="perguntas" class="pagina">
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="faq">
+
+        <div class="faq-item">
+            <button class="faq-btn">Por que limpar o campo?</button>
+            <div class="faq-resposta">
+                Porque evita poluição e protege a natureza.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-btn">Como posso ajudar?</button>
+            <div class="faq-resposta">
+                Participando de ações e descartando lixo corretamente.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-btn">O lixo afeta os animais?</button>
+            <div class="faq-resposta">
+                Sim, pode causar morte e contaminação.
+            </div>
         </div>
 
     </div>
 </section>
 
-<section id="contato" class="pagina">
-    <h2>Entre em Contato</h2>
-
-    <form>
-        <input type="text" placeholder="Seu nome">
-        <input type="email" placeholder="Seu e-mail">
-        <textarea placeholder="Sua mensagem"></textarea>
-
-        <button type="button">Enviar</button>
-    </form>
-</section>
-
 </main>
 
 <script src="main.js"></script>
-
 </body>
 </html>
