@@ -1,7 +1,15 @@
-const botao = document.getElementById("acaoBtn");
-const mensagem = document.getElementById("mensagem");
+const botoes = document.querySelectorAll(".faq-btn");
 
-botao.addEventListener("click", () => {
-    mensagem.textContent =
-        "✅ Obrigado por participar! Cada ação ajuda a manter o campo limpo.";
+botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+
+        const resposta = botao.nextElementSibling;
+
+        if(resposta.style.display === "block"){
+            resposta.style.display = "none";
+        }else{
+            resposta.style.display = "block";
+        }
+
+    });
 });
